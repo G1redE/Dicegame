@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container{
+    max-width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom,rgb(235, 154, 154),rgb(116, 72, 72));
+}
+.dice-game{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.form-container,.board-container{
+    width: 50%;
+    height: 70vh;
+    background:white;
+    position: relative;
+    box-shadow: rgb(59, 37, 37) 5px 5px 19px;
+}
+
+.form-container{
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.board-container{
+    display: none; 
+    border-top-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+.form-heading{
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: rgb(88, 88, 88) 2px 2px 5px;
+}
+
+.input-boxes{
+    margin-top:30px;
+    width: 60%;
+}
+.input-group{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin:10px 0;
+    position: relative;
+
+}
+.input-group input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border:none;
+    border-bottom: 2px solid rgba(75, 74, 74,0.1);
+    padding: 0px 30px 0px 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.input-group input:focus{
+   
+    border-color: rgb(255, 77, 77);
+}
+
+.button{
+    margin-top: 40px;
+
+}
+.button input{
+    border:none;
+    background: linear-gradient(to right,rgb(243, 40, 40),rgb(231, 127, 127));
+    border-radius: 10px;
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+    
+}
+.button input:focus{
+   background: linear-gradient(to right,rgb(247, 64, 64),rgb(253, 176, 32));
+   
+}
+.game-board{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.player1,.player2{
+    width:50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.heading{
+    font-size: 6vh;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.score{
+    font-size: 10vh;
+    color:coral;
+} 
+.dice-img{
+    height:50%;
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dice-img img{
+    max-height: 100%;
+    max-width: 100%;
+}
+#player-1-button ,
+#player-2-button {
+    width: 50%;
+    
+}
+#player-1-button input[disabled],
+#player-2-button input[disabled]{
+    background: rgb(176, 177, 177);
+    color:rgb(0, 0, 0);
+    cursor: not-allowed;
+}
+
+
+
+#restart,
+#reset{
+    margin: 20px 0 20px 0;
+    border:none;
+    background: linear-gradient(to right,rgb(243, 40, 40),rgb(231, 127, 127));
+    border-radius: 5px;
+    color: white;
+    font-size: 1vw;
+    text-align: center;
+    z-index:100;
+    display: none;
+}
+
+#restart:focus,
+#reset:focus{
+    background: linear-gradient(to right,rgb(247, 64, 64),rgb(253, 176, 32));
+    
+ }
+
+.winner{
+    display: block;
+    position:absolute;
+    width:50%;
+    height: 100%;
+    background:#fff;
+    opacity: 0.5;
+    background: url("/images/winner.gif");
+    z-index: 100;
+}
+#award-icon{
+    color:rgb(255, 217, 0);
+}
+#player1-icon{
+    color: rgb(0, 89, 255);
+
+}
+#player2-icon{
+    color: rgb(255, 43, 85);
+
+}
+
+@media only screen and (max-width: 720px) {
+    .form-container,.board-container{
+        width: 100%;
+    }
+    #restart,
+    #reset{
+        font-size: 3vw;
+    }
+    .input-group input{
+    
+        font-size: 12px;
+    }
+    
+  }
