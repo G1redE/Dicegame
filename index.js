@@ -3,7 +3,6 @@ let secondPlayerName="";
 let firstPlayerScore=0;
 let secondPlayerScore=0;
 let totalScore=0;
-
 function onSubmit(event){
     event.preventDefault();
     const formData =document.getElementsByTagName("input");
